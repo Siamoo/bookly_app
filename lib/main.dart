@@ -6,11 +6,13 @@ import 'package:bookly_app/Features/home/presntation/views/home_view.dart';
 import 'package:bookly_app/Features/search/presntation/views/search_view.dart';
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/service_locator.dart';
+import 'package:bookly_app/simple_bloc_observer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   setupServiceLocator();
+  Bloc.observer = SimpleBlocObserver();
   runApp(const BooklyApp());
 }
 
